@@ -1,0 +1,22 @@
+<div class="options">
+  <!-- <a class="source-code-button"
+     href="https://github.com/tiberiuzuld/angular-gridster2/tree/master/src/app/sections/dynamicWidgets"
+     mat-raised-button target="_blank">
+    <button>open_in_new</button>
+    Source
+  </a> -->
+  <!-- <markdown [src]="'assets/dynamicWidgets.md'"></markdown> -->
+  <button mat-mini-fab (click)="addItem()" class="add-button cols-2 addButton">
+    <!-- <mat-icon>add</mat-icon> -->Add
+  </button>
+</div>
+
+
+<gridster [options]="options">
+  <gridster-item [item]="widget" *ngFor="let widget of dashboard">
+    <!-- <app-parent-dynamic [widget]="item" [resizeEvent]="resizeEvent"></app-parent-dynamic> -->
+    
+    <app-all-charts [type]="widget.type" [data]="widget.data" [id]="widget.id" ></app-all-charts>
+
+  </gridster-item>
+</gridster>

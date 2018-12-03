@@ -1,0 +1,54 @@
+<!--
+<gridster [options]="options">
+  <gridster-item [item]="item" *ngFor="let item of dashboard">
+   &lt;!&ndash; <div id="box1"></div>&ndash;&gt;
+        <p>vikas</p>
+      &lt;!&ndash;<div class="pieChart pull-left" style="display: inline-block;margin-top: 15px;margin-left: -12px;">&ndash;&gt;
+        &lt;!&ndash; <div id="tooltip">{{tip}}</div> &ndash;&gt;
+      &lt;!&ndash;</div>&ndash;&gt;
+    &lt;!&ndash; your content here &ndash;&gt;
+  </gridster-item>
+
+  <gridster-item>
+    <div (mousedown)="$event.stopPropagation()" (touchstart)="$event.stopPropagation()">
+      Some content to click without dragging the widget
+    </div>
+    &lt;!&ndash;<div class="item-buttons">
+      <button  class="drag-handler">
+        &lt;!&ndash;<md-icon>open_with</md-icon>&ndash;&gt;
+      </button>
+
+    </div>&ndash;&gt;
+  </gridster-item>
+
+</gridster>-->
+<div style="height: 900px;width: 100%;">
+
+<gridster [options]="gridsterOptions" #gridster>
+
+  <!-- <gridster-item *ngFor="let widget of widgets" [item]="widget" > -->
+<!-- 
+    <div class="pieChart pull-left" style="display: inline-block;margin-top: 15px;margin-left: -12px;">
+  
+    </div> -->
+    <!-- <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"> -->
+      <!--
+      with relative unit such as percentage, the visual size
+      of the square looks unchange regardless of the viewBox
+      -->
+      <!-- <rect x="0" y="0" width="100%" height="100%"/> -->
+    
+      <!--
+      with a large viewBox the circle looks small
+      as it is using user units for the r attribute:
+      4 resolved against 100 as set in the viewBox
+      -->
+      <!-- <circle cx="50%" cy="50%" r="4" fill="white"/>
+    </svg> -->
+
+  <!-- </gridster-item> -->
+  <app-dynamic-widgets></app-dynamic-widgets>
+
+</gridster>
+
+</div>
